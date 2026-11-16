@@ -1,0 +1,37 @@
+{
+  "name": "outline-core",
+  "version": "1.0.0",
+  "description": "Ядро «3D-модель → векторный SVG-outline»: топология, удаление скрытых линий, векторизация, анимация камеры. Без DOM, работает в Node, браузере и Worker.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./webgl": "./src/webgl.js",
+    "./cli": "./src/cli.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "outline-core": "./bin/outline.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "docs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser-parity.mjs"
+  },
+  "peerDependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "three": "0.160.0"
+  },
+  "license": "MIT"
+}
